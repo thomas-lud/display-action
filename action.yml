@@ -1,0 +1,15 @@
+# action.yml
+name: 'copy to qbee file manager with jwt authentication'
+description: 'copy to qbee file manager with jwt authentication'
+inputs:
+  login:  # id of input
+    description: 'login from qbee'
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args: 
+    - ${{ inputs.login}}
